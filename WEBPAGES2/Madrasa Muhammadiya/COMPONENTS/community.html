@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madrasa Community Learning Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #000000;
+        }
+        .chat-box {
+            height: 300px;
+            overflow-y: auto;
+        }
+        .post-card {
+            transition: transform 0.2s;
+        }
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+        .sidebar {
+            background-color: #f8f9fa;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+        .btn-large-text {
+            font-size: 1.1rem;
+        }
+        .custom-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .post-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fs-2" href="/index.html">Madrasa Muhammadiya</a>
+            <button
+                class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-3" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-3" href="/Madrasa Muhammadiya/PAGES/explore.html">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/PAGES/contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/PAGES/admission.html">Admission</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4 sidebar p-4">
+                <h2 class="text-center mb-4">Welcome</h2>
+                <div class="d-grid gap-3">
+                    <button class="btn btn-primary btn-large-text p-3" data-bs-toggle="modal" data-bs-target="#createPostModal">
+                        <i class="fas fa-plus-circle me-2"></i>Create New Post
+                    </button>
+                </div>
+                
+                <div class="mt-5">
+                    <h4 class="mb-3">Quick Tips</h4>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-star text-warning me-2"></i>How to Post
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-star text-warning me-2"></i>Community Guidelines
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-star text-warning me-2"></i>Safety Tips
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9 col-md-8 p-4">
+                <h1 class="text-center mb-5" style="color: white;">Madrasa Muhammadiya</h1>
+                
+                <!-- Community Posts -->
+                <div id="postsContainer" class="row g-4">
+                    <!-- Posts will be dynamically added here -->
+                </div>
+
+                <!-- Create Post Modal -->
+                <div class="modal fade" id="createPostModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Create a Post</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="postForm">
+                                    <div class="mb-3">
+                                        <label for="userName" class="form-label">Your Name</label>
+                                        <input type="text" class="form-control" id="userName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="postContent" class="form-label">What’s on your mind?</label>
+                                        <textarea class="form-control" id="postContent" rows="4" required></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Add an Image</label>
+                                        <input type="file" class="form-control" id="postImage" accept="image/*">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" id="submitPost">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        class MadrasaCommunityHub {
+            constructor() {
+                this.postsContainer = document.getElementById('postsContainer');
+                this.postForm = document.getElementById('postForm');
+                this.userNameInput = document.getElementById('userName');
+                this.postContentInput = document.getElementById('postContent');
+                this.postImageInput = document.getElementById('postImage');
+                this.submitPostButton = document.getElementById('submitPost');
+                this.createPostModal = new bootstrap.Modal(document.getElementById('createPostModal'));
+
+                // Event Listeners
+                this.submitPostButton.addEventListener('click', () => this.createPost());
+                
+                // Load existing posts
+                this.loadPosts();
+            }
+
+            createPost() {
+                const userName = this.userNameInput.value.trim();
+                const postContent = this.postContentInput.value.trim();
+
+                if (!userName || !postContent) {
+                    alert('Please enter your name and post content.');
+                    return;
+                }
+
+                const post = {
+                    id: Date.now(),
+                    userName: userName,
+                    content: postContent,
+                    timestamp: new Date().toLocaleString(),
+                    image: null
+                };
+
+                // Handle image upload
+                if (this.postImageInput.files.length > 0) {
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                        post.image = event.target.result;
+                        this.savePost(post);
+                    };
+                    reader.readAsDataURL(this.postImageInput.files[0]);
+                } else {
+                    this.savePost(post);
+                }
+            }
+
+            savePost(post) {
+                let posts = JSON.parse(localStorage.getItem('madrasaPosts') || '[]');
+                posts.push(post);
+                localStorage.setItem('madrasaPosts', JSON.stringify(posts));
+                
+                // Reset form and close modal
+                this.postForm.reset();
+                this.createPostModal.hide();
+
+                // Reload posts
+                this.loadPosts();
+            }
+
+            loadPosts() {
+                let posts = JSON.parse(localStorage.getItem('madrasaPosts') || '[]');
+                
+                // Clear existing posts
+                this.postsContainer.innerHTML = '';
+
+                // Render posts in reverse chronological order
+                posts.reverse().forEach(post => {
+                    const postColumn = document.createElement('div');
+                    postColumn.classList.add('col-md-6');
+                    
+                    const postCard = document.createElement('div');
+                    postCard.classList.add('card', 'post-card', 'custom-shadow');
+                    
+                    let postContent = `
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <h5 class="card-title mb-0">${post.userName}</h5>
+                                <small class="text-muted ms-2">${post.timestamp}</small>
+                            </div>
+                            <p class="card-text">${post.content}</p>
+                    `;
+
+                    // Add image if exists
+                    if (post.image) {
+                        postContent += `
+                            <img src="${post.image}" class="post-image img-fluid mb-3" alt="Post Image">
+                        `;
+                    }
+
+                    postContent += `
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button class="btn btn-danger delete-post" data-post-id="${post.id}">
+                                    <i class="fas fa-trash me-1"></i> Delete
+                                </button>
+                            </div>
+                        </div>
+                    `;
+
+                    postCard.innerHTML = postContent;
+                    postColumn.appendChild(postCard);
+                    this.postsContainer.appendChild(postColumn);
+
+                    // Add delete event listener
+                    const deleteButton = postColumn.querySelector('.delete-post');
+                    deleteButton.addEventListener('click', () => this.deletePost(post.id));
+                });
+            }
+
+            deletePost(postId) {
+                let posts = JSON.parse(localStorage.getItem('madrasaPosts') || '[]');
+                
+                // Filter out the post with the matching ID
+                posts = posts.filter(post => post.id !== postId);
+                
+                // Save the updated posts array
+                localStorage.setItem('madrasaPosts', JSON.stringify(posts));
+                
+                // Reload posts to reflect deletion
+                this.loadPosts();
+            }
+        }
+
+        // Initialize the community hub when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new MadrasaCommunityHub();
+        });
+    </script>
+</body>
+</html>

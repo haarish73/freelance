@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background-image: url(/bg2.jpg);
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/bg2.jpg');
+        }
+    </style>
+</head>
+<body class="bg-light">
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white fs-2" href="index.html"
+            >Madrasa Muhammadiya</a
+          >
+          <button
+            class="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white fs-3" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-3" href="/Madrasa Muhammadiya/PAGES/explore.html"
+                  >Explore</a
+                >
+              </li>
+              <!-- <li class="nav-item"> -->
+              <!-- <a class="nav-link text-white fs-3" href="community.html">Community</a> -->
+              <!-- </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link text-white fs-3" href="profile.html">Profile</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/PAGES/contact.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/PAGES/admission.html"
+                  >Admission</a
+                >
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link text-white active fs-3" href="login.html">Login</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+    <div class="container py-5">
+        <!-- Contact Form -->
+        <div class="card shadow">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">Contact Us</h3>
+            </div>
+            <div class="card-body">
+                <form class="contact-form needs-validation" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="749e9662-0a78-44a6-8bd0-e443f02e16cc" />
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="contactName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="contactName" name="name" required>
+                            <div class="invalid-feedback">
+                                Please enter your name
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="contactEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="contactEmail" name="email" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="contactPhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="contactPhone" name="phone" required>
+                            <div class="invalid-feedback">
+                                Please enter your phone number
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                            <div class="invalid-feedback">
+                                Please enter a subject
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            <div class="invalid-feedback">
+                                Please enter your message
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="furtherInfo" class="form-label">Further Information</label>
+                            <textarea class="form-control" id="furtherInfo" name="further_info" rows="4" placeholder="Provide any additional information or context" required></textarea>
+                            <div class="invalid-feedback">
+                                Please provide any further information if necessary
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-success" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Form validation script
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+</body>
+</html>

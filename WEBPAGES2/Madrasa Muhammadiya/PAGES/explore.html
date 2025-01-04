@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Courses</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
+        
+        body {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            background-image: url(/bg2.jpg);
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/bg2.jpg');
+        }
+        
+        .card {
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .course-title {
+            color: #842029;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .course-subtitle {
+            color: #0a4958;
+            font-size: 1.1rem;
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .badge-custom {
+            background-color: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white fs-2" href="/index.html"
+        >Madrasa Muhammadiya</a
+      >
+      <button
+        class="navbar-toggler bg-light"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white fs-3" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fs-3" href="/Madrasa Muhammadiya/PAGES/explore.html"
+              >Explore</a
+            >
+          </li>
+          <!-- <li class="nav-item"> -->
+          <!-- <a class="nav-link text-white fs-3" href="community.html">Community</a> -->
+          <!-- </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link text-white fs-3" href="profile.html">Profile</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/PAGES/contact.html"
+              >Contact Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/PAGES/admission.html"
+              >Admission</a
+            >
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link text-white active fs-3" href="login.html">Login</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Main Page -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <!-- Course 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="/Madrasa Muhammadiya/ExploreImages/tech-quan.jpg" class="card-img-top" alt="Quran Studies">
+                    <div class="card-body text-center">
+                        <span class="badge badge-custom mb-2">شعبہ</span>
+                        <h3 class="course-title">درس قرآن</h3>
+                        <p class="course-subtitle">ترجمہ و تفسیر</p>
+                        <a href="#course1" class="btn btn-danger mt-3" onclick="navigateToCoursePage('course1')">مزید پڑھیں</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="/Madrasa Muhammadiya/ExploreImages/2.jpg" class="card-img-top" alt="Hadith Studies">
+                    <div class="card-body text-center">
+                        <span class="badge badge-custom mb-2">شعبہ</span>
+                        <h3 class="course-title">درس حدیث</h3>
+                        <p class="course-subtitle">ترجمہ و شرح حفظ حدیث</p>
+                        <a href="#course2" class="btn btn-danger mt-3" onclick="navigateToCoursePage('course2')">مزید پڑھیں</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="/Madrasa Muhammadiya/ExploreImages/3.jpg" class="card-img-top" alt="Islamic Beliefs">
+                    <div class="card-body text-center">
+                        <span class="badge badge-custom mb-2">شعبہ</span>
+                        <h3 class="course-title">درس عقائد</h3>
+                        <p class="course-subtitle">بنیادی اسلامی عقائد</p>
+                        <a href="#course3" class="btn btn-danger mt-3" onclick="navigateToCoursePage('course3')">مزید پڑھیں</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="/Madrasa Muhammadiya/ExploreImages/4.png" class="card-img-top" alt="Islamic Jurisprudence">
+                    <div class="card-body text-center">
+                        <span class="badge badge-custom mb-2">شعبہ</span>
+                        <h3 class="course-title">درس فقہ</h3>
+                        <p class="course-subtitle">بنیادی اسلامی مسائل</p>
+                        <a href="#course4" class="btn btn-danger mt-3" onclick="navigateToCoursePage('course4')">مزید پڑھیں</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="/Madrasa Muhammadiya/ExploreImages/6.jpg" class="card-img-top" alt="Arabic Literature">
+                    <div class="card-body text-center">
+                        <span class="badge badge-custom mb-2">شعبہ</span>
+                        <h3 class="course-title">عربی ادب</h3>
+                        <p class="course-subtitle">عربی گرامر اور رول پلے</p>
+                        <a href="#course5" class="btn btn-danger mt-3" onclick="navigateToCoursePage('course5')">مزید پڑھیں</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Individual Course Pages (Initially Hidden) -->
+<div id="coursePages" style="display: none;">
+  <!-- Course 1: Quran Studies -->
+  <div id="course1" class="course-page container py-5">
+      <div class="card shadow">
+          <img src="/Madrasa Muhammadiya/ExploreImages/tech-quan.jpg" class="card-img-top" alt="Quran Studies Detailed">
+          <div class="card-body">
+              <h2 class="course-title">درس قرآن - تفصیلی کورس</h2>
+              <p class="course-subtitle mb-4">ترجمہ و تفسیر</p>
+              <div class="row">
+                  <div class="col-md-8">
+                      <h4>کورس کی تفصیلات:</h4>
+                      <ul class="list-unstyled">
+                          <li class="mb-3">• قرآنی آیات کا ترجمہ اور تفسیر</li>
+                          <li class="mb-3">• اسباب نزول کا مطالعہ</li>
+                          <li class="mb-3">• تجوید کے اصول و قواعد</li>
+                          <li class="mb-3">• عملی مشقیں اور تدریسی سرگرمیاں</li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">
+                          <div class="card-body">
+                              <h5>کورس کی معلومات</h5>
+                              <p>مدت:  ماہ</p>
+                              <p>کلاسز: ہفتہ میں  دن</p>
+                              <p>وقت:  گھنٹے فی کلاس</p>
+                              <a href="/Madrasa Muhammadiya/COMPONENTS/enquiry.html"><button type="button" class="btn btn-primary w-100">Enquiry for course</button></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <button class="btn btn-primary mt-4" onclick="backToMain()">واپس جائیں</button>
+          </div>
+      </div>
+  </div>
+
+  <!-- Course 2: Hadith Studies -->
+  <div id="course2" class="course-page container py-5">
+      <div class="card shadow">
+          <img src="/Madrasa Muhammadiya/ExploreImages/2" class="card-img-top" alt="Hadith Studies Detailed">
+          <div class="card-body">
+              <h2 class="course-title">درس حدیث - تفصیلی کورس</h2>
+              <p class="course-subtitle mb-4">ترجمہ و شرح حفظ حدیث</p>
+              <div class="row">
+                  <div class="col-md-8">
+                      <h4>کورس کی تفصیلات:</h4>
+                      <ul class="list-unstyled">
+                          <li class="mb-3">• صحیح بخاری و مسلم کا مطالعہ</li>
+                          <li class="mb-3">• حدیث کی اصطلاحات کا تعارف</li>
+                          <li class="mb-3">• راویوں کا تعارف اور جرح و تعدیل</li>
+                          <li class="mb-3">• چالیس احادیث کا حفظ و ترجمہ</li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">
+                          <div class="card-body">
+                              <h5>کورس کی معلومات</h5>
+                              <p>مدت:  ماہ</p>
+                              <p>کلاسز: ہفتہ میں  دن</p>
+                              <p>وقت:  گھنٹے فی کلاس</p>
+                              <a href="/Madrasa Muhammadiya/COMPONENTS/enquiry.html"><button type="button" class="btn btn-primary w-100">Enquiry for course</button></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <button class="btn btn-primary mt-4" onclick="backToMain()">واپس جائیں</button>
+          </div>
+      </div>
+  </div>
+
+  <!-- Course 3: Islamic Beliefs -->
+  <div id="course3" class="course-page container py-5">
+      <div class="card shadow">
+          <img src="/Madrasa Muhammadiya/ExploreImages/3.jpg" class="card-img-top" alt="Islamic Beliefs Detailed">
+          <div class="card-body">
+              <h2 class="course-title">درس عقائد - تفصیلی کورس</h2>
+              <p class="course-subtitle mb-4">بنیادی اسلامی عقائد</p>
+              <div class="row">
+                  <div class="col-md-8">
+                      <h4>کورس کی تفصیلات:</h4>
+                      <ul class="list-unstyled">
+                          <li class="mb-3">• توحید، رسالت اور آخرت</li>
+                          <li class="mb-3">• ارکان ایمان کی تفصیل</li>
+                          <li class="mb-3">• عقیدہ ختم نبوت</li>
+                          <li class="mb-3">• صفات باری تعالیٰ</li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">
+                          <div class="card-body">
+                              <h5>کورس کی معلومات</h5>
+                              <p>مدت:  ماہ</p>
+                              <p>کلاسز: ہفتہ میں  دن</p>
+                              <p>وقت:  گھنٹے فی کلاس</p>
+                              <a href="/Madrasa Muhammadiya/COMPONENTS/enquiry.html"><button type="button" class="btn btn-primary w-100">Enquiry for course</button></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <button class="btn btn-primary mt-4" onclick="backToMain()">واپس جائیں</button>
+          </div>
+      </div>
+  </div>
+
+  <!-- Course 4: Islamic Jurisprudence -->
+  <div id="course4" class="course-page container py-5">
+      <div class="card shadow">
+          <img src="/Madrasa Muhammadiya/ExploreImages/4.jpg" class="card-img-top" alt="Islamic Jurisprudence Detailed">
+          <div class="card-body">
+              <h2 class="course-title">درس فقہ - تفصیلی کورس</h2>
+              <p class="course-subtitle mb-4">بنیادی اسلامی مسائل</p>
+              <div class="row">
+                  <div class="col-md-8">
+                      <h4>کورس کی تفصیلات:</h4>
+                      <ul class="list-unstyled">
+                          <li class="mb-3">• طہارت و نماز کے مسائل</li>
+                          <li class="mb-3">• روزہ، زکوٰة اور حج</li>
+                          <li class="mb-3">• نکاح و طلاق کے احکام</li>
+                          <li class="mb-3">• معاملات و معاشرت</li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">
+                          <div class="card-body">
+                              <h5>کورس کی معلومات</h5>
+                              <p>مدت:  ماہ</p>
+                              <p>کلاسز: ہفتہ میں  دن</p>
+                              <p>وقت:  گھنٹے فی کلاس</p>
+                              <a href="/Madrasa Muhammadiya/COMPONENTS/enquiry.html"><button type="button" class="btn btn-primary w-100">Enquiry for course</button></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <button class="btn btn-primary mt-4" onclick="backToMain()">واپس جائیں</button>
+          </div>
+      </div>
+  </div>
+
+  <!-- Course 5: Arabic Literature -->
+  <div id="course5" class="course-page container py-5">
+      <div class="card shadow">
+          <img src="/Madrasa Muhammadiya/ExploreImages/6.jpg" class="card-img-top" alt="Arabic Literature Detailed">
+          <div class="card-body">
+              <h2 class="course-title">عربی ادب - تفصیلی کورس</h2>
+              <p class="course-subtitle mb-4">عربی گرامر اور رول پلے</p>
+              <div class="row">
+                  <div class="col-md-8">
+                      <h4>کورس کی تفصیلات:</h4>
+                      <ul class="list-unstyled">
+                          <li class="mb-3">• عربی گرامر کے اصول</li>
+                          <li class="mb-3">• صرف و نحو کی تعلیم</li>
+                          <li class="mb-3">• عربی مکالمہ و محاورہ</li>
+                          <li class="mb-3">• عربی تحریر و انشاء</li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">
+                          <div class="card-body">
+                              <h5>کورس کی معلومات</h5>
+                              <p>مدت:  ماہ</p>
+                              <p>کلاسز: ہفتہ میں  دن</p>
+                              <p>وقت:  گھنٹے فی کلاس</p>
+                              <a href="/Madrasa Muhammadiya/COMPONENTS/enquiry.html"><button type="button" class="btn btn-primary w-100">Enquiry for course</button></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <button class="btn btn-primary mt-4" onclick="backToMain()">واپس جائیں</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+        <!-- Similar structure for other courses... -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function navigateToCoursePage(courseId) {
+            // Hide main page
+            document.querySelector('.container').style.display = 'none';
+            
+            // Show course pages container
+            document.getElementById('coursePages').style.display = 'block';
+            
+            // Hide all course pages
+            document.querySelectorAll('.course-page').forEach(page => {
+                page.style.display = 'none';
+            });
+            
+            // Show selected course page
+            document.getElementById(courseId).style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        function backToMain() {
+            // Hide course pages
+            document.getElementById('coursePages').style.display = 'none';
+            
+            // Show main page
+            document.querySelector('.container').style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>

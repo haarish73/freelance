@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css_files/enquiry.css">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Enquiry Form -->
+    <div class="container form-container">
+        <h2 class="text-center mb-4">Enquiry Form</h2>
+        <form id="enquiry-form" class="needs-validation" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="749e9662-0a78-44a6-8bd0-e443f02e16cc" />
+            <div class="mb-3">
+                <label for="enquiry" class="form-label"></label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Enter HERE ENQUIRY" required>
+                <!-- <div class="invalid-feedback">Please provide your full name.</div> -->
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your full name" required>
+                <div class="invalid-feedback">Please provide your full name.</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+                <div class="invalid-feedback">Please provide a valid email address.</div>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter your phone number" required>
+                <div class="invalid-feedback">Please provide a valid phone number.</div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control" name="message" id="message" rows="4" placeholder="Enter your enquiry" required></textarea>
+                <div class="invalid-feedback">Please enter your message.</div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="success-message" class="alert alert-success mt-4" style="display: none;">
+            <strong>Thank you!</strong> Your enquiry has been submitted successfully.
+        </div>
+    </div>
+
+    <!-- JavaScript for form validation -->
+    <script>
+        // Client-side form validation
+        (function () {
+            const form = document.getElementById('enquiry-form');
+
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    // Optionally show a success message before submission
+                    document.getElementById('success-message').style.display = 'block';
+                }
+                form.classList.add('was-validated');
+            });
+        })();
+    </script>
+
+</body>
+</html>

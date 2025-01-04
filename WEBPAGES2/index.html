@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madrasa Muhammadiya</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">0 -->
+    <link rel="stylesheet" href="/Madrasa Muhammadiya/css_files/main.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+          background-color: whitesmoke;
+      }
+
+      .hero-section {
+          background-color: rgba(0, 0, 0, 0.7);
+          color: white;
+          height: 200px;
+      }
+
+      .main-content {
+          padding: 4rem 0;
+      }
+
+      h1 {
+          font-size: 3.5rem;
+          font-weight: 700;
+          margin-bottom: 2rem;
+      }
+
+      .aim-text, .belief-text {
+          font-size: 2rem;
+          font-weight: 600;
+          margin-bottom: 1.5rem;
+      }
+
+      .description {
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+      }
+
+      .logo {
+          width: 100%;
+          max-width: 500px;
+          height: auto;
+      }
+
+      .read-more-btn {
+          background-color: #8e44ad;
+          color: white;
+          padding: 0.8rem 2rem;
+          border: none;
+          border-radius: 50px;
+          font-size: 1.1rem;
+          text-transform: uppercase;
+          transition: background-color 0.3s ease;
+      }
+
+      .read-more-btn:hover {
+          background-color: #7d3c98;
+      }
+
+      .button-group {
+          display: flex;
+          justify-content: space-around;
+          padding: 20px 0;
+          flex-wrap: wrap;
+      }
+
+      .custom-button {
+          text-align: center;
+          padding: 10px 20px;
+          border-radius: 50px;
+          font-size: 1rem;
+          font-weight: bold;
+          color: #fff;
+          text-transform: uppercase;
+          background-color: #17a2b8;
+          border: none;
+          cursor: pointer;
+          margin: 10px;
+      }
+      .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.custom-button {
+    margin: 5px; /* Space between buttons */
+    flex: 1 1 auto; /* Allow buttons to grow/shrink */
+}
+
+      .custom-button:hover {
+          background-color: #138496;
+      }
+
+      .custom-button.enroll {
+          background-color: #dc3545;
+      }
+
+      .custom-button.enroll:hover {
+          background-color: #c82333;
+      }
+
+      @media (max-width: 768px) {
+          h1 {
+              font-size: 2.5rem;
+          }
+
+          .aim-text,
+          .belief-text {
+              font-size: 1.5rem;
+          }
+
+          .description {
+              font-size: 1rem;
+          }
+
+          .button-group {
+              flex-direction: column;
+              align-items: center;
+          }
+
+          .custom-button {
+              width: 100%;
+              max-width: 300px;
+          }
+      }
+  </style>
+  </head>
+  <body style="background-color: white;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black;">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white fs-2" href="index.html"
+          >Madrasa Muhammadiya</a
+        >
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white fs-3" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-3" href="/Madrasa Muhammadiya/PAGES/explore.html"
+                >Explore</a
+              >
+            </li>
+            <!-- <li class="nav-item"> -->
+            <!-- <a class="nav-link text-white fs-3" href="community.html">Community</a> -->
+            <!-- </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link text-white fs-3" href="profile.html">Profile</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/PAGES/contact.html"
+                >Contact Us</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/COMPONENTS/community.html"
+                >Community</a
+              >
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/PAGES/admission.html"
+                >Admission</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link text-white active fs-3" href="login.html">Login</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br><br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <a href="/Madrasa Muhammadiya/PAGES/primarystages.html">
+            <button class="custom-button">Primary</button>
+          </a>
+        </div>
+        <div class="col-auto">
+          <a href="/Madrasa Muhammadiya/PAGES/secondaryStages.html">
+            <button class="custom-button">Secondary</button>
+          </a>
+        </div>
+        <div class="col-auto">
+          <a href="/Madrasa Muhammadiya/COMPONENTS/readMore.html">
+            <button class="custom-button">Why Us?</button>
+          </a>
+        </div>
+        <div class="col-auto">
+          <a href="/Madrasa Muhammadiya/PAGES/admission.html">
+            <button class="custom-button enroll">Enroll Now!</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <br>
+    <div class="container main-content">
+      <div class="row justify-content-center">
+          <div class="col-lg-15">
+              <div class="card shadow-sm animate__animated animate__fadeIn">
+                  <div class="card-body">
+                      <h2><b>
+                          Why Madrasa Muhammadiya?</b>
+                      </h2>
+                      <p class="card-text aim-text animate-on-scroll">
+                          We aim to revolutionise Islamic learning for children and youth of all ages.
+                      </p>
+                      <p class="card-text description animate-on-scroll">
+                          Gone are the days of being forced to sit through hours of uninspiring and laborious sessions in an attempt to be able to read the Words of Allah ﷻ and learn the basics of His Religion.
+                      </p>
+                      <p class="card-text belief-text animate-on-scroll">
+                          We believe that Islamic learning should be inspirational and fun for our children and youth.
+                      </p>
+                      <p class="card-text description animate-on-scroll">
+                          Developing a lasting love for Allah ﷻ, His Messenger ﷺ, His Book, and His Beautiful Religion that will stand them in good stead to face the challenges of life in a difficult environment.
+                      </p>
+                      <a href="/Madrasa Muhammadiya/COMPONENTS/readMore.html">
+                          <button class="read-more-btn animate-on-scroll">
+                              Read More About Madrasa Muhammadiya
+                          </button>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Header with diagonal design -->
+  <div class="position-relative overflow-hidden">
+      <div class="bg-danger position-absolute" style="height: 120px; width: 100%; transform: skewY(-4deg); transform-origin: top left; z-index: -1;"></div>
+      <div class="bg-warning position-absolute" style="height: 80px; width: 100%; transform: skewY(-4deg); transform-origin: top left; margin-top: 30px; z-index: -2;"></div>
+  </div>
+  
+<!-- Main content -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="text-center mb-4">What is an Online Madrasa?</h1>
+            
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-subtitle mb-3 text-muted">A madrasa — but not as we know it!</h5>
+                    <p class="card-text">A madrasa is traditionally used to refer to after school or weekend classes to teach young children the Quran and occasionally some Islamic studies. A wonderful initiative that has educated millions of children in the recitation and memorisation of the Words of Allah. Our online madrasa aims to revolutionise this form of learning by providing an efficient, fun and engaging platform for children to excel in.</p>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-subtitle mb-3">Virtual Learning Environment</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="bi bi-laptop"></i> Students and parents simply log into the Madrasa Muhammadiya Website Portal
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-camera-video"></i> Live virtual classroom with whiteboard, video, and audio
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-chat"></i> Interactive chatbox for communication
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-subtitle mb-3">Interactive Features</h5>
+                    <p class="card-text">Using voice, text, whiteboard, notes, recordings, presentations and screen sharing, lessons are much more engaging and interactive than at traditional madrasas. Students can be set tasks to work through specific exercises, share their work or demonstrate to the class.</p>
+                    <p class="card-text">This allows every student the chance to directly and privately communicate with the teacher, so no one is ever left feeling missed out or left behind.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-info text-white px-4 py-2">
+                    DOWNLOAD PROSPECTUS
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer design -->
+<div class="position-relative overflow-hidden" style="height: 100px;">
+    <div class="bg-primary position-absolute bottom-0" style="height: 80px; width: 100%; transform: skewY(4deg); transform-origin: bottom right;"></div>
+    <div class="bg-info position-absolute bottom-0" style="height: 40px; width: 100%; transform: skewY(4deg); transform-origin: bottom right;"></div>
+</div>
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- Social Media Section -->
+      <section class="social-media">
+        <div class="container text-center">
+          <span>Get connected with us on social networks:</span>
+          <div>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+            <!-- <a href="#"><i class="fab fa-google"></i></a> -->
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <!-- <a href="#"><i class="fab fa-linkedin"></i></a> -->
+            <!-- <a href="#"><i class="fab fa-github"></i></a -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Content -->
+      <section class="footer-content">
+        <div class="container">
+          <div class="row">
+            <!-- Column 1: About -->
+            <div class="col-md-3">
+              <h6>About Us</h6>
+              <hr />
+              <p>
+                Madrasa Muhammadiya is a hub of learning for spiritual growth
+                and knowledge. We strive to nurture ethical values and
+                education.
+              </p>
+            </div>
+            <!-- Column 2: Products -->
+            <div class="col-md-2">
+              <h6>Student Corners</h6>
+              <hr />
+              <p><a href="/Madrasa Muhammadiya/COMPONENTS/learningmodule.html">Learning Modules</a></p>
+              <p><a href="#">Library</a></p>
+              <!-- <p><a href="#">Community Events</a></p> -->
+              <!-- <p><a href="#">Online Library</a></p> -->
+            </div>
+            <!-- Column 3: Useful Links -->
+            <div class="col-md-2">
+              <h6>Useful Links</h6>
+              <hr />
+              <p><a href="#">Your Account</a></p>
+              <p><a href="/Madrasa Muhammadiya/PAGES/admission.html">Admissions</a></p>
+              <p><a href="#">Help & Support</a></p>
+              <p><a href="/Madrasa Muhammadiya/PAGES/contact.html">Contact Us</a></p>
+            </div>
+            <!-- Column 4: Contact -->
+            <div class="col-md-3">
+              <h6>Contact</h6>
+              <hr />
+              <p><i class="fas fa-home"></i> Hyderabad, Telangana</p>
+              <p><i class="fas fa-envelope"></i> madrasamuhammadiya1124@gmail</p>
+              <p><i class="fas fa-phone"></i> +91 8978713767</p>
+              <p><i class="fas fa-phone"></i> +91 8125228485</p>
+              <p><i class="fas fa-phone"></i> +91 6303584973</p>
+              <p><i class="fas fa-phone"></i> +91 7075474651</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Copyright Section -->
+      <div class="copyright">
+        <p>© 2024 Madrasa Muhammadiya. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
+  
+    </script>
+  </body>
+</html>

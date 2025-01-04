@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secondary Level - Islamic Education</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .secondary-level {
+      background-color: #f9f9f9;
+      padding: 60px 30px;
+    }
+
+    .secondary-level h2 {
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #343a40;
+    }
+
+    .secondary-level p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #6c757d;
+    }
+
+    .top-quality {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      color: white;
+      padding: 60px 30px;
+      position: relative;
+    }
+
+    .top-quality h2 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .top-quality p {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .top-quality img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .top-quality .img-container {
+      position: absolute;
+      bottom: -30px;
+      right: 30px;
+      max-width: 40%;
+    }
+
+    .btn-primary {
+      background-color: #dc3545;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .top-quality .img-container {
+        position: relative;
+        max-width: 100%;
+        bottom: 0;
+        right: 0;
+        margin-top: 30px;
+      }
+    }
+    .hero-section {
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .subject-card {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        .subject-card:hover {
+            transform: translateY(-5px);
+        }
+        .subject-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .enroll-btn {
+            background-color: #ff4444;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+        .enroll-btn:hover {
+            background-color: #ff3333;
+            color: white;
+        }
+        .download-btn {
+            background-color: #00acc1;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+        .download-btn:hover {
+            background-color: #0097a7;
+            color: white;
+        }
+        .heading-divider {
+            width: 80px;
+            height: 4px;
+            background-color: #00acc1;
+            margin: 1rem auto 3rem;
+        }
+        .course-card {
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin-bottom: 2rem;
+            border: none;
+            background: white;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        .course-header {
+            background-color: white;
+            color: #C65D34;
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        .course-title {
+            color: #2B4C5B;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0;
+        }
+        .course-subtitle {
+            background-color: #2B4C5B;
+            color: white;
+            padding: 1rem;
+            font-size: 1.1rem;
+        }
+        .course-dot {
+            color: #C65D34;
+            font-size: 24px;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+        .section-title {
+            color: #2B4C5B;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+  </style>
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black;">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white fs-2" href="/index.html"
+            >Madrasa Muhammadiya</a
+          >
+          <button
+            class="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white fs-3" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-3" href="/Madrasa Muhammadiya/PAGES/explore.html"
+                  >Explore</a
+                >
+              </li>
+              <!-- <li class="nav-item"> -->
+              <!-- <a class="nav-link text-white fs-3" href="community.html">Community</a> -->
+              <!-- </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link text-white fs-3" href="profile.html">Profile</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/PAGES/contact.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/COMPONENTS/community.html"
+                  >Community</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/PAGES/admission.html"
+                  >Admission</a
+                >
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link text-white active fs-3" href="login.html">Login</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br><br>
+  <!-- Secondary Level Section -->
+  <section class="secondary-level">
+    <div class="container">
+      <h2>Secondary Level</h2>
+      <p>
+        Children from the age of <strong>11-15 years old</strong> can join Madrasa Muhammadiya at the Secondary Level, discovering the basics of their religion in a fun, interactive, and engaging way.
+      </p>
+      <p>
+        A keen, excited, and curious mind has no limits to what they can absorb and achieve at this age with the right motivation and interest.
+      </p>
+      <p>
+        The right seeds and correct cultivation at this pivotal age can set the foundations of knowledge and character that will, In shā' Allah, keep our children on a path pleasing to Allah ﷻ and us all, throughout their lives.
+      </p>
+      <p>
+        This crucial stage of learning continues in a fun and engaging manner, using a wide array of methods relevant to the students. As students enter the age of greater responsibility, a greater focus on the Quran and its understanding, Duas, Arabic, Worship, Spirituality, and Manners is emphasized.
+      </p>
+    </div>
+  </section>
+
+  <!-- Top Quality Islamic Education Section -->
+  <section class="top-quality">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <h2>Top Quality Islamic Education</h2>
+          <p>
+            The Quran is the Word of our Creator and Lord of the Heavens and the Earth, Allah ﷻ, and is rightfully given priority when starting off with Islamic Education for our kids. At Madrasa Muhammadiya, we believe our children should understand, enjoy, and love the Words of Allah.
+          </p>
+          <p>
+            Therefore the Quran, Sunnah, Seerah, Islamic Studies, and more is taught at Madrasa Muhammadiya in an engaging, fun, and unique manner with hands-on activities that children can relate to. Using state-of-the-art methods, resources, and fully qualified and capable teachers, we aim to deliver a whole new madrasa experience for our children.
+          </p>
+          <p>
+            With small class sizes, every student at Madrasa Muhammadiya will receive personal and vital attention from teachers. This ensures children can flourish at their own pace, achieving maximum benefit at the crucial ages of learning. All lessons are recorded so children (and parents) can revise over their lessons in their own time.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <div class="img-container">
+            <!-- <img src="/Madrasa Muhammadiya/ddbaec88-2fd7-4d50-bdba-a1af957dfb2b.webp" alt="Child pointing to laptop showing madrasa website"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <section class="hero-section">
+    <div class="container">
+        <h1 class="display-4 mb-3 animate__animated animate__fadeIn">Islamic Education in the comfort of your own home</h1>
+        <p class="lead mb-4 animate__animated animate__fadeIn animate__delay-1s">Anywhere in the world.</p>
+        <div class="heading-divider"></div>
+        
+        <p class="mb-4">No more dropping and picking the kids to and from madrasa! Save time and money!</p>
+        
+        <p class="mb-4">The curriculum at <strong>Madrasa Muhammadiya</strong> includes Quran, Duas, Stories of the Prophets, Pillars of Islam and Iman, Morals and Manners and much more, taught in a fun, interactive and relevant way.</p>
+        
+        <button class="enroll-btn mb-5 animate__animated animate__pulse animate__infinite">ENROLL YOUR CHILD NOW!</button>
+        
+        <h2 class="display-5 mb-4">Give your child a Head Start for Life!</h2>
+        
+        <p class="mb-4">At Madrasa Muhammadiya, we aim to instill in each student a true understanding and love for their deen that will stand them in good stead for the rest of their lives.</p>
+        
+        <p class="mb-4">Seeking knowledge starts from the cradle and ends at the grave. We want all our students to have the best means to strive and succeed in their learning throughout their lives, displaying the beautiful taught by our beloved Prophet ﷺ</p>
+        
+        <button class="download-btn animate__animated animate__fadeIn">DOWNLOAD PROSPECTUS</button>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title mb-5">Our Courses</h2>
+        
+        <div class="row g-4">
+            <!-- First Row -->
+            <div class="col-lg-6">
+                <div class="course-card shadow animate__animated animate__fadeInUp">
+                    <div class="position-relative">
+                        <div class="course-header">
+                            <span class="course-dot">●</span>
+                            COURSE
+                        </div>
+                        <div class="p-3">
+                            <h3 class="course-title">DARS E QURAN</h3>
+                        </div>
+                        <div class="course-subtitle">
+                            TARJAMA O TAFSEER
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="course-card shadow animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="position-relative">
+                        <div class="course-header">
+                            <span class="course-dot">●</span>
+                            COURSE
+                        </div>
+                        <div class="p-3">
+                            <h3 class="course-title">DARS E HADEES</h3>
+                        </div>
+                        <div class="course-subtitle">
+                            TARJAMA TAFSEER & HADEES MEMORIZATION
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="col-lg-6">
+                <div class="course-card shadow animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="position-relative">
+                        <div class="course-header">
+                            <span class="course-dot">●</span>
+                            COURSE
+                        </div>
+                        <div class="p-3">
+                            <h3 class="course-title">DARS E AQAID</h3>
+                        </div>
+                        <div class="course-subtitle">
+                            BASIC ISLAMIC AQAID
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="course-card shadow animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="position-relative">
+                        <div class="course-header">
+                            <span class="course-dot">●</span>
+                            COURSE
+                        </div>
+                        <div class="p-3">
+                            <h3 class="course-title">DARS E FIQH</h3>
+                        </div>
+                        <div class="course-subtitle">
+                            BASIC ISLAMIC MASAIL
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Row -->
+            <div class="col-lg-6 mx-auto">
+                <div class="course-card shadow animate__animated animate__fadeInUp animate__delay-4s">
+                    <div class="position-relative">
+                        <div class="course-header">
+                            <span class="course-dot">●</span>
+                            COURSE
+                        </div>
+                        <div class="p-3">
+                            <h3 class="course-title">ARABIC ADAB</h3>
+                        </div>
+                        <div class="course-subtitle">
+                            SPOKEN ARABIC & GRAMMAR
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

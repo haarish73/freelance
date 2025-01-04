@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Learning Module</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background-image: url(/bg2.jpg);
+
+        }
+        .course-card {
+            background: #f7f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-card h5 {
+            color: #3b3b3b;
+        }
+
+        .course-card p {
+            color: #555;
+        }
+
+        .modal-body ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .modal-body ul li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white fs-2" href="/index.html"
+        >Madrasa Muhammadiya</a
+      >
+      <button
+        class="navbar-toggler bg-light"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white fs-3" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fs-3" href="/Madrasa Muhammadiya/PAGES/explore.html"
+              >Explore</a
+            >
+          </li>
+          <!-- <li class="nav-item"> -->
+          <!-- <a class="nav-link text-white fs-3" href="community.html">Community</a> -->
+          <!-- </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link text-white fs-3" href="profile.html">Profile</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/PAGES/contact.html"
+              >Contact Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white active fs-3" href="/Madrasa Muhammadiya/PAGES/admission.html"
+              >Admission</a
+            >
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link text-white active fs-3" href="login.html">Login</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">Learning Module</h1>
+    <div class="row g-4">
+        <!-- Course 1 -->
+        <div class="col-md-4">
+            <div class="course-card" data-course="quran">
+                <h5>Dars e Quran</h5>
+                <p>Tarjama o Tafseer</p>
+            </div>
+        </div>
+        <!-- Course 2 -->
+        <div class="col-md-4">
+            <div class="course-card" data-course="hadees">
+                <h5>Dars e Hadees</h5>
+                <p>Tarjama Tafseer & Hadees Memorization</p>
+            </div>
+        </div>
+        <!-- Course 3 -->
+        <div class="col-md-4">
+            <div class="course-card" data-course="aqaid">
+                <h5>Dars e Aqaid</h5>
+                <p>Basic Islamic Aqaid</p>
+            </div>
+        </div>
+        <!-- Course 4 -->
+        <div class="col-md-4">
+            <div class="course-card" data-course="fiqh">
+                <h5>Dars e Fiqh</h5>
+                <p>Basic Islamic Masail</p>
+            </div>
+        </div>
+        <!-- Course 5 -->
+        <div class="col-md-4">
+            <div class="course-card" data-course="adab">
+                <h5>Arabic Adab</h5>
+                <p>Spoken Arabic & Grammar</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="courseModalLabel">Course Levels</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li><a href="#" id="beginner-link" target="_blank" class="btn btn-primary btn-sm">Beginner</a></li>
+                    <li><a href="#" id="intermediate-link" target="_blank" class="btn btn-warning btn-sm">Intermediate</a></li>
+                    <li><a href="#" id="advanced-link" target="_blank" class="btn btn-danger btn-sm">Advanced</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Course data mapping to PDF links
+    const courseLinks = {
+        quran: {
+            beginner: "quran-beginner.pdf",
+            intermediate: "quran-intermediate.pdf",
+            advanced: "quran-advanced.pdf"
+        },
+        hadees: {
+            beginner: "hadees-beginner.pdf",
+            intermediate: "hadees-intermediate.pdf",
+            advanced: "hadees-advanced.pdf"
+        },
+        aqaid: {
+            beginner: "aqaid-beginner.pdf",
+            intermediate: "aqaid-intermediate.pdf",
+            advanced: "aqaid-advanced.pdf"
+        },
+        fiqh: {
+            beginner: "fiqh-beginner.pdf",
+            intermediate: "fiqh-intermediate.pdf",
+            advanced: "fiqh-advanced.pdf"
+        },
+        adab: {
+            beginner: "adab-beginner.pdf",
+            intermediate: "adab-intermediate.pdf",
+            advanced: "adab-advanced.pdf"
+        }
+    };
+
+    // Add event listeners to course cards
+    document.querySelectorAll('.course-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const course = card.dataset.course;
+            const links = courseLinks[course];
+            if (links) {
+                document.getElementById('beginner-link').href = links.beginner;
+                document.getElementById('intermediate-link').href = links.intermediate;
+                document.getElementById('advanced-link').href = links.advanced;
+                const modal = new bootstrap.Modal(document.getElementById('courseModal'));
+                modal.show();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

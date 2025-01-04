@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library for Students</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body h5 {
+            font-size: 1.25rem;
+        }
+
+        .card-body p {
+            font-size: 0.875rem;
+        }
+
+        .library-header {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Student Library</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="library.html">Library</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Library Page Content -->
+<div class="container my-5">
+    <div class="library-header text-center">
+        <h1>Student Library</h1>
+        <p class="lead">Access all the resources you need to excel in your courses.</p>
+    </div>
+
+    <!-- Category Section -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Quran Section -->
+        <div class="col">
+            <div class="card">
+                <img src="quran.jpg" class="card-img-top" alt="Quran Resources">
+                <div class="card-body">
+                    <h5 class="card-title">Quran Resources</h5>
+                    <p class="card-text">Study materials including Tafseer, Translation, and more.</p>
+                    <a href="quran-resources.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hadees Section -->
+        <div class="col">
+            <div class="card">
+                <img src="hadees.jpg" class="card-img-top" alt="Hadees Resources">
+                <div class="card-body">
+                    <h5 class="card-title">Hadees Resources</h5>
+                    <p class="card-text">Learn from the authentic Hadees collection.</p>
+                    <a href="hadees-resources.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fiqh Section -->
+        <div class="col">
+            <div class="card">
+                <img src="fiqh.jpg" class="card-img-top" alt="Fiqh Resources">
+                <div class="card-body">
+                    <h5 class="card-title">Fiqh Resources</h5>
+                    <p class="card-text">Access Islamic jurisprudence and practical guidelines.</p>
+                    <a href="fiqh-resources.html" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Resources Section -->
+    <div class="mt-5">
+        <h3>Additional Resources</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- PDF Resources -->
+            <div class="col">
+                <div class="card">
+                    <img src="pdf.jpg" class="card-img-top" alt="PDF Resources">
+                    <div class="card-body">
+                        <h5 class="card-title">PDF Library</h5>
+                        <p class="card-text">Download and access all course PDFs.</p>
+                        <a href="pdf-library.html" class="btn btn-secondary">Go to PDF Library</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Resources -->
+            <div class="col">
+                <div class="card">
+                    <img src="video.jpg" class="card-img-top" alt="Video Resources">
+                    <div class="card-body">
+                        <h5 class="card-title">Video Tutorials</h5>
+                        <p class="card-text">Watch helpful tutorials and lectures on various topics.</p>
+                        <a href="video-tutorials.html" class="btn btn-secondary">Watch Videos</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Articles Section -->
+            <div class="col">
+                <div class="card">
+                    <img src="article.jpg" class="card-img-top" alt="Articles Resources">
+                    <div class="card-body">
+                        <h5 class="card-title">Articles & Journals</h5>
+                        <p class="card-text">Read articles to enhance your understanding of the subjects.</p>
+                        <a href="articles.html" class="btn btn-secondary">Read Articles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="bg-light text-center py-4">
+    <p>&copy; 2024 Student Library. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
